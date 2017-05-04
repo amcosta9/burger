@@ -11,12 +11,14 @@ var burger = {
     },
     // Add new burger to burgers table in burgers_db.
     insertOne: function(burger_type, cb) {
+        console.log('called burger.insertone');
         orm.insertOne(burger_type, function(res) {
             cb(res);
         });
     },
     // Update burger to devoured from burgers table in burgers_db
     updateOne: function(id, cb) {
+        console.log('called burger.updateone');
         orm.updateOne(id, function(res) {
             cb(res);
         });

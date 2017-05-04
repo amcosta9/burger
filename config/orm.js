@@ -20,7 +20,7 @@ var orm = {
     // Add new burger to burgers table in burgers_db.
     insertOne: function (burger_type, cb) {
         console.log('insertOne function');
-        var queryString = "INSERT INTO `burgers` (burger_type) VALUES ('" + burger_type + "')";
+        var queryString = "INSERT INTO `burgers` (burger_name) VALUES ('" + burger_type + "')";
         console.log(queryString);
         connection.query(queryString, function (err, result) {
             if (err) {
